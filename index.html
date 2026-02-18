@@ -1468,23 +1468,15 @@
                     </div>
                 </div>
 
-                <div class="contact-form reveal reveal-delay-3">
-                    <h3>Send an Enquiry</h3>
-                    <form id="contact-form" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Smith">
+                <div class="contact-form reveal reveal-delay-3" style="display:flex;align-items:center;justify-content:center;text-align:center;">
+                    <div>
+                        <div style="width:64px;height:64px;border-radius:16px;background:rgba(227,104,37,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E36825" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required placeholder="Tell us about your farm and how we can help..."></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Send Enquiry</button>
-                    </form>
+                        <h3 style="margin-bottom:0.5rem;">Email Us Directly</h3>
+                        <p style="color:var(--gray-600);margin-bottom:1.5rem;font-size:0.95rem;">Drop us a line to discuss how SnailCam can work on your farm.</p>
+                        <a href="mailto:rain@snailcam.com.au" class="btn btn-primary" style="font-size:1rem;">rain@snailcam.com.au</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1598,16 +1590,6 @@
             if (e.key === 'Escape') { lightbox.classList.remove('active'); document.body.style.overflow = ''; }
         });
 
-        // Contact form
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const subject = encodeURIComponent('SnailCam Enquiry from ' + name);
-            const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-            window.location.href = 'mailto:rain@snailcam.com.au?subject=' + subject + '&body=' + body;
-        }
     </script>
 </body>
 </html>

@@ -773,6 +773,80 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
 
+        /* ========== PUBLICATIONS ========== */
+        .publications {
+            background: var(--gray-100);
+            position: relative;
+        }
+
+        .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .pub-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            text-decoration: none;
+            color: var(--black);
+            border: 1px solid transparent;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            border-color: var(--orange);
+        }
+
+        .pub-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(0, 119, 181, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pub-card h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: var(--black);
+        }
+
+        .pub-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        .pub-card .pub-source {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            .pub-grid { grid-template-columns: 1fr; }
+        }
+
         /* ========== CONTACT ========== */
         .contact { background: var(--gray-100); position: relative; }
 
@@ -1146,7 +1220,7 @@
                     <p class="reveal reveal-delay-4">Developed and field-tested on a farm in Esperance, Western Australia, SnailCam is built for the conditions broadacre growers actually work in — dust, vibration, variable light, and long days in the paddock.</p>
                 </div>
                 <div class="about-visual reveal reveal-delay-3">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Design-001-B_03.jpg" alt="SnailCam Detection System" loading="lazy">
+                    <img src="img/PXL_20241022_051900782.MP.jpg" alt="SnailCam mounted on CLAAS header" loading="lazy">
                     <div class="stat-badge">
                         <div class="stat-number">30<span style="font-size:0.6em">km/h</span></div>
                         <div class="stat-label">Max operating speed</div>
@@ -1267,28 +1341,90 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox(this)">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Snails2.png" alt="Snail Detection Map — Field Survey" loading="lazy">
-                    <div class="gallery-item-overlay"><span>Field Survey Map</span></div>
+                    <img src="img/bg.png" alt="Snail Heat Map — Paddock Overview" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Snail Heat Map</span></div>
                 </div>
                 <div class="gallery-item reveal reveal-delay-3" onclick="openLightbox(this)">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Snails1.png" alt="Snail Detection Map — GPS Overlay" loading="lazy">
-                    <div class="gallery-item-overlay"><span>GPS Overlay</span></div>
+                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Snails2.png" alt="Snail Detection Map — Field Survey" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Detection Map</span></div>
                 </div>
                 <div class="gallery-item reveal reveal-delay-4" onclick="openLightbox(this)">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/bg.png" alt="Snail Heat Map" loading="lazy">
-                    <div class="gallery-item-overlay"><span>Snail Heat Map</span></div>
+                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Snails1.png" alt="Snail Detection Map — GPS Overlay" loading="lazy">
+                    <div class="gallery-item-overlay"><span>GPS Overlay</span></div>
                 </div>
             </div>
 
             <div class="product-showcase">
                 <div class="product-item reveal reveal-delay-3" onclick="openLightbox(this)">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/Design-001-B_03.jpg" alt="SnailCam Device" loading="lazy">
-                    <div class="product-label">SnailCam Device</div>
+                    <img src="img/PXL_20241022_051900782.MP.jpg" alt="SnailCam mounted on CLAAS header" loading="lazy">
+                    <div class="product-label">Mounted on CLAAS Header</div>
                 </div>
                 <div class="product-item reveal reveal-delay-4" onclick="openLightbox(this)">
-                    <img src="https://snailcam.com.au/wp-content/uploads/2025/02/pxl-1.jpg" alt="SnailCam Mounted in Field" loading="lazy">
+                    <img src="img/PXL_20250407_103154888.MP.jpg" alt="SnailCam night operation on New Holland T9.615" loading="lazy">
+                    <div class="product-label">Night Operation</div>
+                </div>
+            </div>
+
+            <div class="product-showcase" style="margin-top: 1.5rem;">
+                <div class="product-item reveal reveal-delay-5" onclick="openLightbox(this)">
+                    <img src="img/PXL_20251019_231639148.jpg" alt="SnailCam field mount on machinery" loading="lazy">
                     <div class="product-label">Field Installation</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="publications section-pad" id="publications">
+        <div class="container">
+            <div class="section-label reveal">In The Press</div>
+            <div class="section-title reveal reveal-delay-1">Publications</div>
+            <p class="section-desc reveal reveal-delay-2">SnailCam has been featured in leading Australian agricultural and science publications.</p>
+
+            <div class="pub-grid">
+                <a href="https://www.australiangeographic.com.au/news/2025/05/regional-innovations-on-the-snail-trail/" target="_blank" rel="noopener" class="pub-card reveal reveal-delay-2">
+                    <div class="pub-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0077B5" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Regional Innovations on the Snail Trail</h3>
+                        <p>Feature on SnailCam's role in tackling snail populations through camera-based detection technology.</p>
+                        <div class="pub-source">Australian Geographic <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+                    </div>
+                </a>
+
+                <a href="https://www.stockjournal.com.au/story/9093730/the-latest-in-snail-control-solutions-for-broadacre-farmers/" target="_blank" rel="noopener" class="pub-card reveal reveal-delay-3">
+                    <div class="pub-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0077B5" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>The Latest in Snail Control Solutions for Broadacre Farmers</h3>
+                        <p>Coverage of new snail control technologies available to broadacre farming operations.</p>
+                        <div class="pub-source">Stock Journal <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+                    </div>
+                </a>
+
+                <a href="https://sepwa.org.au/wp-content/uploads/2025/05/April-2025.pdf" target="_blank" rel="noopener" class="pub-card reveal reveal-delay-4">
+                    <div class="pub-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0077B5" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div>
+                        <h3>SEPWA Newsletter — April 2025</h3>
+                        <p>Featured in the South East Premium Wheat Growers Association newsletter.</p>
+                        <div class="pub-source">SEPWA <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+                    </div>
+                </a>
+
+                <a href="https://www.farmweekly.com.au/story/9094514/new-tech-helps-aussie-farmers-tackle-snail-infestations/" target="_blank" rel="noopener" class="pub-card reveal reveal-delay-5">
+                    <div class="pub-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0077B5" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>New Tech Helps Aussie Farmers Tackle Snail Infestations</h3>
+                        <p>How Australian farmers are using new technology to manage snail pressure in their crops.</p>
+                        <div class="pub-source">Farm Weekly <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
